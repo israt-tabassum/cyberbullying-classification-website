@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Page</title>
+    <style>
+        /* Reset default browser styles */
+        body, h3 {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Container styling */
+        .container, .abstract-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            border: 1px solid #d5cccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            background-color: #ffffff;
+        }
+
+        /* Form element styling */
+        form div {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="file"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            font-size: 14px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        h3 {
+            text-align: center;
+            padding-bottom: 10px;
+            color: #444;
+        }
+
+        .submit-button {
+            width: 15%;
+        }
+
+        /* Abstract container styling */
+        .abstract-container {
+            text-align: center;
+        }
+
+        .figure-container {
+            text-align: center;
+        }
+
+        .paper-link-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .paper-link-button:hover {
+            background-color: #218838;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <h3>Cyberbullying Multi-class Classification for Multi-modal Data</h3>
+            
+            <div>
+                <label for="dataset">Dataset:</label>
+                <select id="dataset" name="dataset">
+                    <option value="public">Public Dataset</option>
+                    <option value="private">Private Dataset</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="singleText">Text:</label>
+                <input type="text" id="singleText" name="singleText">
+                <input type="submit" value="Submit Text" class="submit-button">
+            </div>
+
+            <div>
+                <label for="image">Image:</label>
+                <input type="file" id="image" name="image" accept="image/*">
+                <input type="submit" value="Upload Image" class="submit-button">
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+</body>
+</html>
