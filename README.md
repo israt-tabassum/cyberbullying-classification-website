@@ -27,7 +27,7 @@ Contains the code for graphical user interface (GUI). This will show the cyberbu
 
 ◆	Ensure that all paths in the code are properly configured to match the environment.
 
-◆	Run the command `python app.py` in the terminal.
+◆	Run the command `python app.py` from app.py file in the terminal.
 
 
 
